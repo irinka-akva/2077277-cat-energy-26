@@ -9,16 +9,18 @@
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo-icon logo-icon" href="index.html">
+    <div class="header">
+    <a class="header__logo-icon logo-icon" href="index.html">
       <img src="img/logo-mobile.svg" width="34" height="38" alt="Функциональное питание для котов.">
     </a>
-    <a class="main-header__logo-text logo-text" href="index.html">
+    <a class="header__logo-text logo-text" href="index.html">
       <img src="img/logo-text.svg" width="101" height="18" alt="Cat energy.">
     </a>
-    <button class="main-header__toggle main-header__toggle--menu main-header__toggle--close" type="button">
+    <button class="header__toggle header__toggle--open header__toggle--close header__toggle--no-js" type="button">
       <span class="visually-hidden">Открыть меню.</span>
     </button>
-    <nav class="main-header__navigation navigation main-header__navigation--open main-header__navigation--close">
+  </div>
+    <nav class="header__navigation navigation header__navigation--open header__navigation--close header__navigation--no-js">
       <ul class="navigation__list">
         <li class="navigation__item navigation__item--current">
           <a class="navigation__link" href="index.html">Главная</a>
@@ -39,7 +41,7 @@
       <h2 class="catalog__title">Каталог продукции</h2>
       <ul class="catalog__list cards-list">
         <li class="cards-list__item card">
-          <a class="card__link" href="#"><img src="img/catalog-chicken-1.png" width="68" height="86" alt=""></a>
+          <a class="card__link" href="#"><img src="img/catalog-img/catalog-chicken-1.png" width="68" height="86" alt=""></a>
           <a class="card__link" href="#">
             <h3 class="card__title">Cat Energy <br>PRO 500 г</h3>
           </a>
@@ -60,7 +62,7 @@
           <a class="card__button button button--main-color" href="#">Заказать</a>
         </li>
         <li class="cards-list__item card">
-          <a class="card__link" href="#"><img src="img/catalog-chicken-2.png" width="84" height="101" alt=""></a>
+          <a class="card__link" href="#"><img src="img/catalog-img/catalog-chicken-2.png" width="84" height="101" alt=""></a>
           <a class="card__link" href="#">
             <h3 class="card__title">Cat Energy <br>PRO 1000 г</h3>
           </a>
@@ -81,7 +83,7 @@
           <a class="card__button button button--main-color" href="#">Заказать</a>
         </li>
         <li class="cards-list__item card">
-          <a class="card__link" href="#"><img src="img/catalog-fish-1.png" width="68" height="86" alt=""></a>
+          <a class="card__link" href="#"><img src="img/catalog-img/catalog-fish-1.png" width="68" height="86" alt=""></a>
           <a class="card__link" href="#">
             <h3 class="card__title">Cat Energy <br>PRO 500 г</h3>
           </a>
@@ -102,7 +104,7 @@
           <a class="card__button button button--main-color" href="#">Заказать</a>
         </li>
         <li class="cards-list__item card">
-          <a class="card__link" href="#"><img src="img/catalog-fish-2.png" width="84" height="101" alt=""></a>
+          <a class="card__link" href="#"><img src="img/catalog-img/catalog-fish-2.png" width="84" height="101" alt=""></a>
           <a class="card__link" href="#">
             <h3 class="card__title">Cat Energy <br>PRO 1000 г</h3>
           </a>
@@ -123,7 +125,7 @@
           <a class="card__button button button--main-color" href="#">Заказать</a>
         </li>
         <li class="cards-list__item card">
-          <a class="card__link" href="#"><img src="img/catalog-buckwheat-1.png" width="68" height="86" alt=""></a>
+          <a class="card__link" href="#"><img src="img/catalog-img/catalog-buckwheat-1.png" width="68" height="86" alt=""></a>
           <a class="card__link" href="#">
             <h3 class="card__title">Cat Energy <br>SLIM 500 г</h3>
           </a>
@@ -144,7 +146,7 @@
           <a class="card__button button button--main-color" href="#">Заказать</a>
         </li>
         <li class="cards-list__item card">
-          <a class="card__link" href="#"><img src="img/catalog-buckwheat-2.png" width="84" height="101"
+          <a class="card__link" href="#"><img src="img/catalog-img/catalog-buckwheat-2.png" width="84" height="101"
               alt=""></a>
           <a class="card__link" href="#">
             <h3 class="card__title">Cat Energy <br>SLIM 1000 г</h3>
@@ -166,7 +168,7 @@
           <a class="card__button button button--main-color" href="#">Заказать</a>
         </li>
         <li class="cards-list__item card">
-          <a class="card__link" href="#"><img src="img/catalog-rice.png" width="68" height="86" alt=""></a>
+          <a class="card__link" href="#"><img src="img/catalog-img/catalog-rice.png" width="68" height="86" alt=""></a>
           <a class="card__link" href="#">
             <h3 class="card__title">Cat Energy <br>SLIM 500 г</h3>
           </a>
@@ -239,16 +241,21 @@
         </ul>
     </section>
     <section class="bonus">
+      <div class="bonus__wrapper">
       <h2 class="visually-hidden">Подарок за покупку</h2>
       <p class="bonus__description">Закажите все <br> и получите чехол для <br>кота в подарок!</p>
+    </div>
     </section>
   </main>
   <footer class="main-footer">
-    <section class="cooperation">
+    <section class="cooperation cooperation--color">
+      <div class="cooperation__wrapper">
       <h2 class="visually-hidden">Информация для дилеров</h2>
       <p class="cooperation__text">приглашаем к сотрудничеству дилеров!</p>
       <p class="cooperation__contacts">ул. Большая Конюшенная, д. 19/8 <br>Санкт-Петербург</p>
-    </section>
+    </div>
+    <img class="cooperation__map" src="img/index-img/map.png" width="320" height="362" alt="Наш адрес на карте.">
+  </section>
     <div class="map-contacts"></div>
     <section class="contacts">
       <h2 class="visually-hidden">Наши контакты.</h2>
