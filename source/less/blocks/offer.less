@@ -1,0 +1,52 @@
+.offer {
+  font-family: @upper-font;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: @color-main-background;
+}
+
+.offer__wrapper {
+  position: relative;
+  background: url("../img/index-img/green-background.png") no-repeat center,
+    url("../img/index-img/cat-background.jpg") no-repeat center;
+  padding-top: 27px;
+  background-color: @color-button;
+  padding-bottom: 164px;
+
+  &::after {
+    .pseudo ();
+    background-image: url("../img/index-img/index-can-background.png");
+    width: 280px;
+    height: 270px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 167px;
+  }
+}
+
+.offer__title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-family: @upper-font;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  color: @color-main-background;
+}
+
+.offer__text {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.offer__button-wrapper {
+  padding-top: 138px;
+}
+
+.offer__button {
+  line-height: 18px;
+  padding: 7px 44px;
+}
