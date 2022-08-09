@@ -4,14 +4,32 @@
   &--color {
     background-color: @color-background;
   }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    padding-top: 0;
+  }
 }
 
 .cooperation__wrapper {
-  padding: 0 20px 26px 20px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    padding: 56px 80px;
+    min-width: 565px;
+    min-height: 198px;
+    top: 95px;
+    left: 110px;
+    background-color: @color-main-background;
+    border: 1px solid @color-main-text;
+  }
 }
 
 .cooperation__text {
   margin: 0;
+  min-width: 139px;
   font-family: @upper-font;
   font-size: 16px;
   line-height: 20px;
@@ -21,5 +39,10 @@
 
 .cooperation__contacts {
   margin: 0;
+  min-width: 139px;
   line-height: 20px;
+}
+
+.cooperation__map {
+  display: block;
 }

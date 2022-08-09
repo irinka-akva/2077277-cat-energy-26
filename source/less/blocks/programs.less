@@ -1,20 +1,32 @@
 .programs {
-  padding: 20px;
+  background-color: @color-main-background;
 }
 
 .programs__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
 
-.programs__item:not(:last-child) {
-  margin-bottom: 20px;
+  @media (min-width: @tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }
 
 .programs__item {
   padding: 30px 33px 22px 20px;
   background-color: @color-background;
+
+  @media (min-width: @desktop-width) {
+    min-width: 570px;
+  }
 }
 
 .programs__title {
@@ -22,7 +34,6 @@
   margin-left: 71px;
   margin-bottom: 29px;
   font-family: @upper-font;
-  font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;

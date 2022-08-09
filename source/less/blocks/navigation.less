@@ -5,16 +5,35 @@
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
 .navigation__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    max-width: 440px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 650px;
+  }
 }
 
 .navigation__item {
   padding: 22px 0 24px 0;
+}
+
+.navigation__item:not(:last-child) {
+  @media (min-width: @tablet-width) {
+    margin-right: 35px;
+  }
 }
 
 .navigation__link {

@@ -5,15 +5,25 @@
   line-height: 14px;
   text-align: center;
   color: @color-main-background;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    color: @color-headind;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
 .offer__wrapper {
   position: relative;
   background: url("../img/index-img/green-background.png") no-repeat center,
     url("../img/index-img/cat-background.jpg") no-repeat center;
-  padding-top: 27px;
   background-color: @color-button;
   padding-bottom: 164px;
+  min-height: 302px;
 
   &::after {
     .pseudo ();
@@ -24,6 +34,30 @@
     right: 0;
     margin: auto;
     top: 167px;
+
+    @media (min-width: @tablet-width) {
+      background-image: url("../img/index-img/index-can-tablet.png");
+      width: 709px;
+      height: 609px;
+    }
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../img/index-img/index-can-desktop.png");
+      width: 552px;
+      height: 499px;
+      left: 540px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    background: none;
+    padding: 0 117px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+    min-height: 585px;
+    margin-bottom: 82px;
   }
 }
 
@@ -35,6 +69,10 @@
   font-size: 36px;
   line-height: 36px;
   color: @color-main-background;
+
+  @media (min-width: @tablet-width) {
+    color: @color-headind;
+  }
 }
 
 .offer__text {
@@ -44,9 +82,27 @@
 
 .offer__button-wrapper {
   padding-top: 138px;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 340px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 50%;
+    min-height: 585px;
+    margin-bottom: 82px;
+  }
 }
 
 .offer__button {
   line-height: 18px;
   padding: 7px 44px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 230px;
+    left: 117px;
+    min-width: 244px;
+  }
 }
