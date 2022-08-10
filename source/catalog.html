@@ -22,7 +22,7 @@
       </button>
     </div>
     <nav
-      class="header__navigation navigation header__navigation--open header__navigation--close header__navigation--no-js">
+      class="navigation navigation--open navigation--close navigation--no-js">
       <ul class="navigation__list">
         <li class="navigation__item navigation__item--current">
           <a class="navigation__link" href="index.html">Главная</a>
@@ -39,7 +39,7 @@
   </header>
   <main class="main-container">
     <h1 class="visually-hidden">Каталог с доступными товарами</h1>
-    <section class="catalog">
+    <section class="catalog container">
       <h2 class="catalog__title">Каталог продукции</h2>
       <ul class="catalog__list cards-list">
         <li class="cards-list__item card">
@@ -202,7 +202,8 @@
         </li>
       </ul>
     </section>
-    <section class="additional-catalog">
+    <div class="main-container-wrapper">
+    <section class="additional-catalog container">
       <h2 class="additional-catalog__title">Дополнительные товары</h2>
       <ul class="additional-catalog__list additional-cards">
         <li class="additional-cards__item additional-card">
@@ -247,16 +248,17 @@
         </li>
       </ul>
     </section>
-    <section class="bonus">
+    <section class="bonus container">
       <div class="bonus__wrapper">
         <h2 class="visually-hidden">Подарок за покупку</h2>
         <p class="bonus__description">Закажите все <br> и получите чехол для <br>кота в подарок!</p>
       </div>
     </section>
+  </div>
   </main>
   <footer class="main-footer">
     <section class="cooperation cooperation--color">
-      <div class="cooperation__wrapper">
+      <div class="cooperation__wrapper container">
         <h2 class="visually-hidden">Информация для дилеров</h2>
         <p class="cooperation__text">приглашаем к сотрудничеству дилеров!</p>
         <p class="cooperation__contacts">ул. Большая Конюшенная, д. 19/8 <br>Санкт-Петербург</p>
@@ -265,26 +267,28 @@
     </section>
     <div class="map-contacts"></div>
     <section class="contacts">
-      <h2 class="visually-hidden">Наши контакты.</h2>
-      <a class="contacts__logo-text logo-text" href="index.html">
-        <img src="img/logo-text.svg" width="128" height="24" alt="Cat energy.">
-      </a>
-      <ul class="contacts__list list-social">
-        <li class="list-social__item">
-          <a class="list-social__link list-social__link--vk" href="https://vk.com/htmlacademy"><span
-              class="visually-hidden">Вконтакте</span></a>
-        </li>
-        <li class="list-social__item">
-          <a class="list-social__link list-social__link--youtube"
-            href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ютуб</span></a>
-        </li>
-        <li class="list-social__item">
-          <a class="list-social__link list-social__link--telegram" href="https://t.me/htmlacademy"><span
-              class="visually-hidden">Телеграм</span></a>
-        </li>
-      </ul>
-      <div class="contacts__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <div class="contacts__container container">
+        <h2 class="visually-hidden">Наши контакты.</h2>
+        <a class="contacts__logo-text logo-text" href="index.html">
+          <img src="img/logo-text.svg" width="128" height="24" alt="Cat energy.">
+        </a>
+        <ul class="contacts__list list-social">
+          <li class="list-social__item">
+            <a class="list-social__link list-social__link--vk" href="https://vk.com/htmlacademy"><span
+                class="visually-hidden">Вконтакте</span></a>
+          </li>
+          <li class="list-social__item">
+            <a class="list-social__link list-social__link--youtube"
+              href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ютуб</span></a>
+          </li>
+          <li class="list-social__item">
+            <a class="list-social__link list-social__link--telegram" href="https://t.me/htmlacademy"><span
+                class="visually-hidden">Телеграм</span></a>
+          </li>
+        </ul>
+        <div class="contacts__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
       </div>
     </section>
   </footer>

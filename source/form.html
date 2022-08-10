@@ -22,7 +22,7 @@
       </button>
     </div>
     <nav
-      class="header__navigation navigation header__navigation--open header__navigation--close header__navigation--no-js">
+      class="navigation navigation--open navigation--close navigation--no-js">
       <ul class="navigation__list">
         <li class="navigation__item navigation__item--current">
           <a class="navigation__link" href="index.html">Главная</a>
@@ -38,6 +38,7 @@
     </nav>
   </header>
   <main class="main-container">
+    <div class="container">
     <header class="form-header">
       <h1 class="form-header__title">Подбор программы</h1>
       <p class="form-header__description">Заполните анкету, и мы подберем<br> программу питания для вашего кота
@@ -46,6 +47,7 @@
     <section class="form-section">
       <h2 class="visually-hidden">Заполнение формы-анкеты</h2>
       <form class="form" action="https://echo.htmlacademy.ru/" method="get">
+        <div class="form__wrapper">
         <fieldset class="form__fildset">
           <legend class="visually-hidden">Информация о коте</legend>
           <label class="form__label">Имя:*
@@ -73,6 +75,7 @@
             <span class="form__text form__text--color-radio">не знаю (нужен ваш совет)</span>
           </label>
         </fieldset>
+      </div>
         <fieldset class="form__fildset">
           <legend class="form__legend">Контактные данные <br> владельца кота</legend>
           <label class="form__label">e-mail:*
@@ -114,10 +117,11 @@
         <small class="form__note">* - Обязательные поля</small>
       </form>
     </section>
+  </div>
   </main>
   <footer class="main-footer">
     <section class="cooperation cooperation--color">
-      <div class="cooperation__wrapper">
+      <div class="cooperation__wrapper container">
         <h2 class="visually-hidden">Информация для дилеров</h2>
         <p class="cooperation__text">приглашаем к сотрудничеству дилеров!</p>
         <p class="cooperation__contacts">ул. Большая Конюшенная, д. 19/8 <br>Санкт-Петербург</p>
@@ -125,26 +129,28 @@
       <img class="cooperation__map" src="img/index-img/map.png" width="320" height="362" alt="Наш адрес на карте.">
     </section>
     <section class="contacts">
-      <h2 class="visually-hidden">Наши контакты.</h2>
-      <a class="contacts__logo-text logo-text" href="index.html">
-        <img src="img/logo-text.svg" width="128" height="24" alt="Cat energy.">
-      </a>
-      <ul class="contacts__list list-social">
-        <li class="list-social__item">
-          <a class="list-social__link list-social__link--vk" href="https://vk.com/htmlacademy"><span
-              class="visually-hidden">Вконтакте</span></a>
-        </li>
-        <li class="list-social__item">
-          <a class="list-social__link list-social__link--youtube"
-            href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ютуб</span></a>
-        </li>
-        <li class="list-social__item">
-          <a class="list-social__link list-social__link--telegram" href="https://t.me/htmlacademy"><span
-              class="visually-hidden">Телеграм</span></a>
-        </li>
-      </ul>
-      <div class="contacts__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <div class="contacts__container container">
+        <h2 class="visually-hidden">Наши контакты.</h2>
+        <a class="contacts__logo-text logo-text" href="index.html">
+          <img src="img/logo-text.svg" width="128" height="24" alt="Cat energy.">
+        </a>
+        <ul class="contacts__list list-social">
+          <li class="list-social__item">
+            <a class="list-social__link list-social__link--vk" href="https://vk.com/htmlacademy"><span
+                class="visually-hidden">Вконтакте</span></a>
+          </li>
+          <li class="list-social__item">
+            <a class="list-social__link list-social__link--youtube"
+              href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">Ютуб</span></a>
+          </li>
+          <li class="list-social__item">
+            <a class="list-social__link list-social__link--telegram" href="https://t.me/htmlacademy"><span
+                class="visually-hidden">Телеграм</span></a>
+          </li>
+        </ul>
+        <div class="contacts__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
       </div>
     </section>
   </footer>

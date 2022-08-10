@@ -77,18 +77,31 @@
   @media (min-width: @tablet-width) {
     width: 174px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 326px;
+  }
 }
 
 .example__cost-text {
   @media (min-width: @tablet-width) {
     display: block;
   }
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+  }
 }
 
 .example__wrapper {
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 326px;
   }
 }
 

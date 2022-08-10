@@ -46,6 +46,7 @@
       width: 552px;
       height: 499px;
       left: 540px;
+      top: 100px;
     }
   }
 
@@ -89,9 +90,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 50%;
-    min-height: 585px;
+    position: relative;
+    z-index: -1;
+    top: -70px;
+    width: 720px;
+    height: 694px;
     margin-bottom: 82px;
+    background: url("../img/index-img/green-background-desktop.png") no-repeat center,
+      url("../img/index-img/cat-background-desktop.jpg") no-repeat center;
+    background-color: @color-button;
   }
 }
 
@@ -102,7 +109,7 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     top: 230px;
-    left: 117px;
+    left: -630px;
     min-width: 244px;
   }
 }
