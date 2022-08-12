@@ -6,6 +6,12 @@
   }
 
   @media (min-width: @desktop-width) {
+    background-image: linear-gradient(transparent 25%, @color-background 25%);
+  }
+}
+
+.example__all-container {
+  @media (min-width: @desktop-width) {
     display: flex;
   }
 }
@@ -13,7 +19,6 @@
 .example__all-wrapper {
   @media (min-width: @desktop-width) {
     width: 50%;
-    background-image: linear-gradient(transparent 25%, @color-background 25%);
   }
 }
 
@@ -106,11 +111,30 @@
 }
 
 .example__image-wrapper {
-  @media (min-width: @tablet-width) {
-    background-image: linear-gradient(transparent 25%, @color-background 25%);
-  }
-
   @media (min-width: @desktop-width) {
     width: 50%;
   }
+}
+
+.example__image-wrapper-2 {
+  display: flex;
+}
+
+.example__image--after {
+  margin-left: -140px;
+}
+
+.example__image-wrapper--before {
+  margin-left: auto;
+}
+
+.example__image-wrapper--after {
+  margin-right: auto;
+}
+
+.example__image-wrapper--before,
+.example__image-wrapper--after {
+  width: 140px;
+  height: 256px;
+  overflow: hidden;
 }
