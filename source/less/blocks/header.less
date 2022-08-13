@@ -1,4 +1,5 @@
 .header {
+  padding-top: 10px;
   padding-bottom: 17px;
 }
 
@@ -16,4 +17,8 @@
   height: 24px;
   background-color: transparent;
   vertical-align: middle;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

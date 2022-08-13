@@ -1,5 +1,31 @@
 .cards-list {
-  margin: 0;
+  text-align: center;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(324px, auto));
+    row-gap: 124px;
+    column-gap: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 245px));
+    row-gap: 144px;
+    column-gap: 80px;
+  }
+}
+
+.cards-list__item {
+  @media (min-width: @tablet-width) {
+    min-height: 430px;
+  }
+}
+
+.cards-list__item:not(:last-child) {
+  @media (min-width: @tablet-width) {
+    background-color: @color-background;
+  }
 }

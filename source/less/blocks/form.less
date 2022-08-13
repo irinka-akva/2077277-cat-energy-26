@@ -2,9 +2,27 @@
   font-family: @upper-font;
 }
 
+.form__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
 .form__fildset {
   margin-bottom: 34px;
 }
+
+.form__fildset:nth-child(1),
+.form__fildset:nth-child(2) {
+  @media (min-width: @desktop-width) {
+    width: 50%;
+  }
+}
+
+.form__label {
+  display: block;
+}
+
 
 .form__legend {
   margin: 0;
@@ -24,7 +42,11 @@
   color: @color-main-text;
 }
 
-.form__text {
+.form__text--color-radio {
+  color: @color-card-title;
+}
+
+.form__text--color-checkbox {
   color: @color-headind;
 }
 
