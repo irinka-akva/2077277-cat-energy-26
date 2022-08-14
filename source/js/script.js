@@ -1,3 +1,4 @@
+
 let nav = document.querySelector('.navigation');
 let navToggle = document.querySelector('.navigation__toggle');
 

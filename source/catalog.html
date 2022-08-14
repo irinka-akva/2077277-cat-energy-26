@@ -9,34 +9,37 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header container">
+  <header class="main-header">
     <div class="header">
-      <a class="header__logo-icon logo-icon" href="index.html">
-        <img src="img/logo-mobile.svg" width="34" height="38" alt="Функциональное питание для котов.">
-      </a>
-      <a class="header__logo-text logo-text" href="index.html">
-        <img src="img/logo-text.svg" width="101" height="18" alt="Cat energy.">
-      </a>
-      <button class="header__toggle header__toggle--open header__toggle--close header__toggle--no-js" type="button">
-        <span class="visually-hidden">Открыть меню.</span>
-      </button>
+      <div class="header__wrapper-logo">
+        <a class="header__logo-icon logo-icon" href="index.html">
+          <img src="img/logo-mobile.svg" width="34" height="38" alt="Функциональное питание для котов.">
+        </a>
+        <a class="header__logo-text logo-text" href="index.html">
+          <img class="header__logo-img" src="img/logo-text.svg" width="101" height="18" alt="Cat energy.">
+        </a>
+      </div>
     </div>
-    <nav
-      class="navigation navigation--open navigation--close navigation--no-js">
-      <ul class="navigation__list">
-        <li class="navigation__item navigation__item--current">
-          <a class="navigation__link" href="index.html">Главная</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="catalog.html">Каталог
-            продукции</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__link" href="form.html">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="navigation navigation--close">
+    <button class="navigation__toggle" type="button">
+      <span class="visually-hidden">Открыть меню.</span>
+    </button>
+    <div class="navigation__wrapper">
+    <ul class="navigation__list">
+      <li class="navigation__item">
+        <a class="navigation__link" href="index.html">Главная</a>
+      </li>
+      <li class="navigation__item navigation__item--current">
+        <a class="navigation__link" href="catalog.html">Каталог
+          продукции</a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link" href="form.html">Подбор программы</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+</header>
   <main class="main-container">
     <h1 class="visually-hidden">Каталог с доступными товарами</h1>
     <section class="catalog container">
@@ -296,6 +299,7 @@
       </div>
     </section>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
