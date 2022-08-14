@@ -21,7 +21,7 @@
 }
 
 .programs__item {
-  padding: 30px 33px 22px 20px;
+  padding: 30px 20px 18px 20px;
   background-color: @color-background;
 
   @media (min-width: @desktop-width) {
@@ -30,6 +30,7 @@
 }
 
 .programs__title {
+  position: relative;
   margin: 0;
   margin-left: 71px;
   margin-bottom: 29px;
@@ -39,17 +40,64 @@
   line-height: 37px;
   text-transform: uppercase;
   color: @color-headind;
+
+  &--passive::before {
+    .pseudo ();
+    width: 50px;
+    height: 53px;
+    left: -69px;
+    top: -10px;
+    background-image: url("../img/index-img/programm-1-icon.svg");
+  }
+
+  &--active::before {
+    .pseudo ();
+    width: 67px;
+    height: 50px;
+    left: -79px;
+    top: -10px;
+    background-image: url("../img/index-img/programm-2-icon.svg");
+  }
 }
 
 .programs__description {
+  position: relative;
   margin: 0;
   margin-bottom: 42px;
+
+  &::after {
+    .pseudo ();
+    height: 1px;
+    width: 100%;
+    bottom: -23px;
+    background-color: @color-line-2;
+  }
 }
 
 .programs__link {
+  position: relative;
   font-family: @upper-font;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: @color-headind;
+  padding-right: 47px;
+  max-width: 238px;
+
+  &::after {
+    .pseudo ();
+    width: 32px;
+    height: 11px;
+    right: 0;
+    top: 7px;
+    background-image: url("../img/index-img/one-arrow.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.programs__link:hover::after {
+  background-image: url("../img/index-img/one-arrow-long.svg");
 }

@@ -24,7 +24,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: -2;
+    z-index: -1;
   }
 }
 
@@ -32,7 +32,7 @@
   position: relative;
   padding-top: 27px;
   background-image: linear-gradient(@color-button 303px, transparent 303px);
-  z-index: -2;
+  z-index: 0;
 
   @media (min-width: @tablet-width) {
     background-image: none;
@@ -61,7 +61,10 @@
     background-image: url("../img/index-img/index-can-desktop.png");
     width: 552px;
     height: 499px;
-    top: 100px;
+    bottom: 136px;
+    right: 330px;
+    left: auto;
+    margin: 0;
   }
 }
 
@@ -97,6 +100,10 @@
     max-width: 450px;
     margin: 55px 0 41px 87px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 100px 0 40px 80px;
+  }
 }
 
 .offer__text {
@@ -112,22 +119,18 @@
     max-width: 530px;
     margin: 0 0 49px 87px;
   }
+
+  @media (min-width: @desktop-width) {
+    max-width: 450px;
+    margin: 0 0 52px 80px;
+  }
 }
 
 .offer__button {
   line-height: 18px;
-  padding: 10px;
+  padding: 14px;
   min-width: 280px;
   margin-bottom: 20px;
-
-  &:hover {
-    background-color: @color-button-dark;
-  }
-
-  &:active {
-    background-color: @color-button-dark;
-    color: fade (@color-main-background, 30%);
-  }
 
   @media (min-width: @tablet-width) {
     min-width: 244px;
@@ -140,5 +143,6 @@
 
   @media (min-width: @tablet-width) {
     min-width: 244px;
+    margin-bottom: 267px;
   }
 }
