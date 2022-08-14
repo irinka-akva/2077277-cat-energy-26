@@ -50,6 +50,15 @@
 
 .cooperation__map {
   display: block;
-  margin: 0 auto;
+  border: none;
+  margin: auto;
   max-width: @desktop-width;
+
+  @media (min-width: @tablet-width) {
+    max-height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+  }
 }

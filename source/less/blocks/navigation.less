@@ -1,4 +1,5 @@
 .navigation {
+  position: relative;
   font-family: @upper-font;
   font-weight: 500;
   font-size: 20px;
@@ -12,7 +13,7 @@
 }
 
 .navigation__list {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style-type: none;
 
@@ -27,7 +28,11 @@
 }
 
 .navigation__item {
-  padding: 22px 0 24px 0;
+  border-bottom: 1px solid @color-line;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+  }
 }
 
 .navigation__item:not(:last-child) {
@@ -37,5 +42,99 @@
 }
 
 .navigation__link {
+  display: block;
+  min-height: 65px;
+  padding: 22px 20px 24px 20px;
   color: @color-headind;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.navigation__toggle {
+  position: absolute;
+  padding: 0;
+  right: 20px;
+  top: -45px;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.navigation--close .navigation__toggle::before {
+  .pseudo ();
+  top: 2px;
+  right: 0;
+  width: 24px;
+  height: 1.5px;
+  background-color: @color-headind;
+  box-shadow: 0 9px 0 0 @color-headind, 0 18px 0 0 @color-headind;
+}
+
+.navigation--close .navigation__toggle:hover::before {
+  background-color: fade(@color-headind, 60%);
+  box-shadow:
+    0 9px 0 0 fade(@color-headind, 60%),
+    0 18px 0 0 fade(@color-headind, 60%);
+}
+
+.navigation--close .navigation__toggle:active::before {
+  background-color: fade(@color-headind, 60%);
+  box-shadow:
+    0 9px 0 0 fade(@color-headind, 60%),
+    0 18px 0 0 fade(@color-headind, 60%);
+}
+
+.navigation--open .navigation__toggle::before,
+.navigation--open .navigation__toggle::after {
+  .pseudo ();
+  top: 10px;
+  right: -3px;
+  width: 25px;
+  height: 1.5px;
+  background-color: @color-headind;
+}
+
+.navigation--open .navigation__toggle::before {
+  transform: rotate(45deg);
+  box-shadow: none;
+}
+
+.navigation--open .navigation__toggle::after {
+  transform: rotate(-45deg);
+}
+
+.navigation--open .navigation__toggle:hover::before,
+.navigation--open .navigation__toggle:hover::after {
+  background-color: fade(@color-headind, 60%);
+}
+
+.navigation--open .navigation__toggle:active::before,
+.navigation--open .navigation__toggle:active::after {
+  background-color: fade(@color-headind, 60%);
+}
+
+.navigation--no-js .navigation__toggle {
+  display: none;
+}
+
+@media (max-width: @mobile-width-only) {
+  .navigation--close .navigation__item {
+    display: none;
+  }
+}
+
+.navigation--open .navigation__wrapper {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  background-color: @color-main-background;
 }
