@@ -24,8 +24,12 @@
   padding: 30px 20px 18px 20px;
   background-color: @color-background;
 
+  @media (min-width: @tablet-width) {
+    padding: 77px 51px 55px 52px;
+  }
+
   @media (min-width: @desktop-width) {
-    min-width: 570px;
+    padding: 77px 28px 53px 52px;
   }
 }
 
@@ -48,6 +52,21 @@
     left: -69px;
     top: -10px;
     background-image: url("../img/index-img/programm-1-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: initial;
+      width: 100px;
+      height: 106px;
+      left: -162px;
+      top: -41px;
+    }
   }
 
   &--active::before {
@@ -57,6 +76,35 @@
     left: -79px;
     top: -10px;
     background-image: url("../img/index-img/programm-2-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: initial;
+      width: 134px;
+      height: 100px;
+      left: -181px;
+      top: -47px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 24px;
+    margin-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    margin-bottom: 73px;
+    margin-left: 162px;
   }
 }
 
@@ -64,6 +112,7 @@
   position: relative;
   margin: 0;
   margin-bottom: 42px;
+  min-height: 90px;
 
   &::after {
     .pseudo ();
@@ -71,6 +120,61 @@
     width: 100%;
     bottom: -23px;
     background-color: @color-line-2;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 268px;
+    margin-bottom: 48px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: @color-headind;
+    min-height: 96px;
+
+    &--passive::before {
+      .pseudo ();
+      width: 200px;
+      height: 211px;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background-image: url("../img/index-img/programm-1-icon.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+
+      @media (min-width: @desktop-width) {
+        display: none;
+      }
+    }
+
+    &--active::before {
+      .pseudo ();
+      width: 268px;
+      height: 200px;
+      right: -34px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background-image: url("../img/index-img/programm-2-icon.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+
+      @media (min-width: @desktop-width) {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 23px;
+    padding-right: 0;
+    min-height: 72px;
   }
 }
 
@@ -95,6 +199,11 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1.5;
   }
 }
 
