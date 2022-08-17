@@ -85,7 +85,6 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 30px;
   }
-
 }
 
 .example__item {
@@ -205,7 +204,10 @@
 
 .example__image-wrapper-2 {
   display: flex;
-  margin-top: 195px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 190px;
+  }
 }
 
 .example__image--after {
@@ -233,8 +235,22 @@
   color: @color-brown;
 }
 
+.example__range-line {
+  position: absolute;
+  width: 4px;
+  height: 256px;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: @color-brown;
+  border-radius: 2px;
+}
+
 .example__range {
   position: absolute;
+  z-index: 1;
   top: 0;
   bottom: 0;
   right: 0;
@@ -247,19 +263,6 @@
   border: 2px solid @color-brown;
   border-radius: 20px;
   cursor: pointer;
-
-  &::before {
-    .pseudo ();
-    width: 4px;
-    height: 256px;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    background-color: @color-brown;
-    border-radius: 2px;
-  }
 
   &:hover {
     border-color: @color-button;
@@ -278,10 +281,10 @@
   color: @color-button-dark;
 }
 
-.example__range:hover::before {
+.example__range:hover + .example__range-line {
   background-color: @color-button;
 }
 
-.example__range:active::before {
+.example__range:active + .example__range-line {
   background-color: @color-button-dark;
 }
