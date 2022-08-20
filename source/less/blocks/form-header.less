@@ -5,16 +5,38 @@
 .form-header__title {
   margin: 0;
   margin-bottom: 37px;
+  margin-top: 27px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
   color: @color-headind;
+
+  @media (min-width: @tablet-width) {
+    margin: 54px 69px 55px 69px;
+    font-size: 60px;
+    line-height: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 70px 0 56px 0;
+  }
 }
 
 .form-header__description {
   margin: 0;
+  margin-bottom: 39px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   color: @color-headind;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0 70px 66px 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 66px 0;
+  }
 }

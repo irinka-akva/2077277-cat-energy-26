@@ -5,6 +5,7 @@
   font-family: @upper-font;
   text-transform: uppercase;
   cursor: pointer;
+  outline: none;
 }
 
 .button--main-color {
@@ -18,6 +19,10 @@
   &:active {
     background-color: @color-button-dark;
     color: fade(@color-main-background, 30%);
+  }
+
+  &:focus {
+    background-color: @color-button-dark;
   }
 }
 

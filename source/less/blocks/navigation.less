@@ -54,18 +54,31 @@
         left: 0;
         height: 2px;
         background: @color-button;
+
+        @media (min-width: @desktop-width) {
+          display: none;
+        }
       }
     }
   }
 
   @media (min-width: @desktop-width) {
-    &--current {
-      position: relative;
+    &--current-white::after {
+      .pseudo ();
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      background: @color-main-background;
+    }
 
-      &::after {
-        .pseudo ();
-        background: @color-main-background;
-      }
+    &--current-green::after {
+      .pseudo ();
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      background: @color-button;
     }
   }
 }
@@ -96,7 +109,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    color: @color-main-background;
+    &--white {
+      color: @color-main-background;
+    }
+
+    &--black {
+      color: @color-text-cooperation;
+    }
   }
 }
 

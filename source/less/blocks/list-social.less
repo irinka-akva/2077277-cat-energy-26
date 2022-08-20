@@ -10,7 +10,28 @@
 
 .list-social__link {
   display: block;
-  padding: 10px;
-  border: 1px solid @color-headind;
+  min-width: 28px;
+  min-height: 22px;
+  padding: 0;
   width: 24px;
+}
+
+.list-social__link-icon {
+  display: block;
+  padding: 0;
+  color: @color-brown;
+  margin: auto;
+
+  &:hover {
+    color: @color-button;
+  }
+
+  &:active {
+    color: fade(@color-button, 30%);
+  }
+}
+
+.list-social__link-icon-you,
+.list-social__link-icon-you-tel {
+  margin-top: 3px;
 }

@@ -1,6 +1,4 @@
 .cooperation {
-  padding-top: 26px;
-
   &--color {
     background-color: @color-background;
   }
@@ -15,8 +13,22 @@
 }
 
 .cooperation__wrapper {
+  padding-top: 26px;
+
+  &--white {
+    background-color: @color-main-background;
+  }
+
+  &--grey {
+    background-color: @color-background;
+  }
+
   @media (min-width: @desktop-width) {
     position: relative;
+
+    &--grey {
+      background-color: @color-main-background;
+    }
   }
 }
 

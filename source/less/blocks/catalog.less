@@ -1,5 +1,5 @@
 .catalog {
-  background-color: @color-main-background;
+  padding-top: 27px;
 }
 
 .catalog__title {
@@ -10,4 +10,19 @@
   font-size: 36px;
   line-height: 36px;
   color: @color-headind;
+
+  &::before {
+    .pseudo ();
+    height: 1px;
+    width: 100%;
+    bottom: -49px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: @color-line;
+  }
+}
+
+.catalog__title-wrapper {
+  position: relative;
 }
