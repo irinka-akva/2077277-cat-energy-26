@@ -2,18 +2,21 @@
   &--color {
     background-color: @color-background;
   }
-
-  @media (min-width: @tablet-width) {
-    padding-top: 60px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 0;
-  }
 }
 
 .cooperation__wrapper {
   padding-top: 26px;
+  padding-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
   &--white {
     background-color: @color-main-background;
@@ -35,15 +38,15 @@
 .cooperation__wrapper-2 {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 26px;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
-    padding: 0 40px 56px 40px;
+    padding: 0 40px 0 40px;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    padding: 56px 80px;
+    padding: 0 80px;
     width: 565px;
     min-height: 198px;
     top: 98px;

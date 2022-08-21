@@ -1,18 +1,53 @@
 .additional-card {
-  padding: 13px 0 15px 0;
+  padding: 13px 0 19px 0;
   text-align: center;
+  min-height: 130px;
+  border-bottom: 1px solid @color-border;
+
+  @media (min-width: @tablet-width) {
+    padding: 26px 38px 28px 38px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 25px;
+    border-right: 1px solid @color-border;
+    border-left: 1px solid @color-border;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-right: none;
+    border-left: none;
+    padding: 15px 0 17px 0;
+    grid-template-columns: 36.2% 36.4% 27.4%;
+    min-height: 0;
+  }
+}
+
+.additional-card:first-child {
+  border-top: 1px solid @color-border;
 }
 
 .additional-card__title {
   margin: 0;
   margin-bottom: 13px;
+  padding-right: 15px;
   font-family: @upper-font;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
+  text-align: left;
   color: @color-card-title;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: center;
+  }
 }
 
 .additional-card__description {
@@ -22,6 +57,29 @@
   list-style-type: none;
   font-size: 14px;
   line-height: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: center;
+  }
+}
+
+.additional-card__description-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 73.7% 26.3%;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 63.1% 36.9%;
+  }
 }
 
 .additional-card__description-term,
@@ -29,8 +87,44 @@
   display: inline-block;
 }
 
+.additional-card__description-term {
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
+}
+
+.additional-card__description-meaning {
+  text-align: right;
+  margin: 0;
+  padding-left: 15px;
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .additional-card__button {
   padding: 10px 10px;
   font-size: 16px;
   line-height: 20px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
 }

@@ -31,6 +31,7 @@
 
 .form__fildset {
   margin: 0;
+  padding: 0;
   border: none;
   padding-top: 22px;
   padding-bottom: 19px;
@@ -223,7 +224,7 @@
     }
   }
 
-  &--mail-icon {
+  &-mail-icon {
     position: absolute;
     color: @color-button;
     right: 15px;
@@ -240,7 +241,7 @@
     }
   }
 
-  &--tel-icon {
+  &-tel-icon {
     position: absolute;
     color: @color-card-title;
     right: 13px;
@@ -253,43 +254,43 @@
 /* stylelint-disable */
 // противоречие между stylelint и editorconfig документа в части пробелов до и после знака "+"
 
-.form__control:invalid:hover+.form__control--tel-icon,
-.form__control:invalid:hover+.form__control--mail-icon {
+.form__control:invalid:hover+.form__control-tel-icon,
+.form__control:invalid:hover+.form__control-mail-icon {
   color: @color-card-title;
 }
 
-.form__control:hover+.form__control--tel-icon,
-.form__control:hover+.form__control--mail-icon {
+.form__control:hover+.form__control-tel-icon,
+.form__control:hover+.form__control-mail-icon {
   color: @color-card-title;
 }
 
-.form__control:invalid:focus+.form__control--tel-icon,
-.form__control:invalid:focus+.form__control--mail-icon {
+.form__control:invalid:focus+.form__control-tel-icon,
+.form__control:invalid:focus+.form__control-mail-icon {
   color: @color-button;
 }
 
-.form__control:focus+.form__control--tel-icon,
-.form__control:focus+.form__control--mail-icon {
+.form__control:focus+.form__control-tel-icon,
+.form__control:focus+.form__control-mail-icon {
   color: @color-button;
 }
 
-.form__control:active+.form__control--tel-icon,
-.form__control:active+.form__control--mail-icon {
+.form__control:active+.form__control-tel-icon,
+.form__control:active+.form__control-mail-icon {
   color: @color-button;
 }
 
-.form__control:invalid:active+.form__control--tel-icon,
-.form__control:invalid:active+.form__control--mail-icon {
+.form__control:invalid:active+.form__control-tel-icon,
+.form__control:invalid:active+.form__control-mail-icon {
   color: @color-button;
 }
 
-.form__control:disabled+.form__control--tel-icon,
-.form__control:disabled+.form__control--mail-icon {
+.form__control:disabled+.form__control-tel-icon,
+.form__control:disabled+.form__control-mail-icon {
   opacity: 0.3;
 }
 
-.form__control:invalid+.form__control--tel-icon,
-.form__control:invalid+.form__control--mail-icon {
+.form__control:invalid+.form__control-tel-icon,
+.form__control:invalid+.form__control-mail-icon {
   color: @color-invalid;
 }
 
@@ -467,13 +468,14 @@
     width: 227px;
     padding: 0 20px;
     margin-top: -18px;
+    margin-left: -20px;
     background-color: @color-main-background;
 
     @media (min-width: @tablet-width) {
       width: 590px;
       padding: 0 39px;
       margin-top: -25px;
-      margin-left: 30px;
+      margin-left: 0;
 
       br {
         display: none;
@@ -481,7 +483,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      margin-left: 70px;
+    margin-left: -39px;
     }
   }
 
@@ -489,17 +491,18 @@
     width: 161px;
     padding: 0 20px;
     margin-top: -18px;
+    margin-left: -20px;
     background-color: @color-main-background;
 
     @media (min-width: @tablet-width) {
       width: 258px;
       padding: 0 38px;
       margin-top: -25px;
-      margin-left: 30px;
+      margin-left: 0;
     }
 
     @media (min-width: @desktop-width) {
-      margin-left: 70px;
+      margin-left: -39px;
     }
   }
 
@@ -507,17 +510,18 @@
     width: 181px;
     padding: 0 20px;
     margin-top: -18px;
+    margin-left: -20px;
     background-color: @color-main-background;
 
     @media (min-width: @tablet-width) {
       width: 293px;
       padding: 0 41px;
       margin-top: -25px;
-      margin-left: 30px;
+      margin-left: 0;
     }
 
     @media (min-width: @desktop-width) {
-      margin-left: 70px;
+      margin-left: -39px;
     }
   }
 }
@@ -535,17 +539,14 @@
 }
 
 .form__legend-contacts-wrapper {
-  width: 100%;
   border-top: 2px solid @color-button;
 }
 
 .form__legend-comments-wrapper {
-  width: 100%;
   border-top: 2px solid @color-button;
 }
 
 .form__legend-add-wrapper {
-  width: 100%;
   border-top: 2px solid @color-button;
 }
 
@@ -589,6 +590,7 @@
 .form__label-radio,
 .form__label-checkbox,
 .form__control,
+.form__textarea,
 .form__control::placeholder,
 .form__textarea::placeholder {
   font-family: @upper-font;

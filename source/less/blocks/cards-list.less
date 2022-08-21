@@ -1,6 +1,8 @@
 .cards-list {
   text-align: center;
   padding: 0;
+  margin: 0;
+  padding-bottom: 25px;
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
@@ -8,6 +10,8 @@
     grid-template-columns: repeat(2, minmax(324px, auto));
     row-gap: 124px;
     column-gap: 60px;
+    padding: 0 30px;
+    padding-bottom: 68px;
   }
 
   @media (min-width: @desktop-width) {
@@ -15,6 +19,10 @@
     grid-template-columns: repeat(4, minmax(auto, 245px));
     row-gap: 144px;
     column-gap: 80px;
+    margin: 0 auto;
+    padding: 0 110px;
+    padding-bottom: 75px;
+    max-width: @desktop-width;
   }
 }
 
