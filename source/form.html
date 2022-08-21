@@ -53,8 +53,8 @@
           <div class="form__wrapper">
             <div class="form__wrapper-info">
               <fieldset class="form__fildset">
+                <legend class="visually-hidden">Информация о коте</legend>
                 <div class="form__wrapper-1">
-                  <legend class="visually-hidden">Информация о коте</legend>
                   <div class="form__container form__container--name">
                     <label class="form__label" for="name">Имя:*</label>
                     <input class=" form__control form__control--text" id="name" type="text" name="name"
@@ -71,8 +71,8 @@
                       placeholder="7">
                   </div>
                 </div>
+              </fieldset>
             </div>
-            </fieldset>
           </div>
           <div class="form__wrapper-radio">
             <fieldset class="form__fildset form__fildset--radio">
@@ -105,13 +105,13 @@
             </fieldset>
           </div>
         </div>
-        </div>
         <div class="form__wrapper-contact ">
           <fieldset class="form__fildset form__fildset--contacts">
+            <legend class="visually-hidden"></legend>
             <div class="form__legend-contacts-wrapper">
               <div class="form__legend-contacts-wrapper-1 container">
-              <legend class="form__legend form__legend--contacts">Контактные данные <br> владельца кота</legend>
-            </div>
+                <h3 class="form__legend form__legend--contacts">Контактные данные <br> (владельца кота)</h3>
+              </div>
             </div>
             <div class="form__fildset-container-contacts container">
               <div class="form__container form__container--mail">
@@ -146,24 +146,26 @@
         </div>
         <div class="form__wrapper-text">
           <fieldset class="form__fildset form__fildset--comments">
+            <legend class="visually-hidden"></legend>
             <div class="form__legend-comments-wrapper">
               <div class="form__legend-comments-wrapper-1 container">
-              <legend class="form__legend form__legend--comments">Комментарий</legend>
-            </div>
+                <h3 class="form__legend form__legend--comments">Комментарий</h3>
+              </div>
             </div>
             <div class="form__label-container-comments container">
               <label class="visually-hidden"></label>
-                <textarea class="form__textarea" rows="9" cols="35" name="about-you-cat"
-                  placeholder="Расскажите обо всех повадках кота"></textarea>
+              <textarea class="form__textarea" rows="9" cols="35" name="about-you-cat"
+                placeholder="Расскажите обо всех повадках кота"></textarea>
 
             </div>
           </fieldset>
         </div>
         <div class="form__wrapper-check">
           <fieldset class="form__fildset form__fildset--add">
+            <legend class="visually-hidden"></legend>
             <div class="form__legend-add-wrapper">
               <div class="form__legend-add-wrapper-1 container">
-              <legend class="form__legend form__legend--add">Дополнительно</legend>
+                <h3 class="form__legend form__legend--add">Дополнительно</h3>
               </div>
             </div>
             <div class="form__label-container-add container">
@@ -198,13 +200,16 @@
                 </li>
               </ul>
             </div>
+
+          </fieldset>
         </div>
-        </fieldset>
+
+
         <div class="form__button-wrapper container">
           <button class="form__button button button--main-color" type="submit">Отправить заявку</button>
           <small class="form__note">* - Обязательные поля</small>
         </div>
-        </div>
+
       </form>
     </section>
   </main>
