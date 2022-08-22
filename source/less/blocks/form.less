@@ -192,16 +192,14 @@
     border-color: @color-border;
   }
 
-  &:invalid:hover {
-    border-color: @color-border;
-  }
-
   &:focus {
     border-color: @color-main-text;
+    box-shadow: 0 0 0 1px @color-main-text;
   }
 
   &:invalid:focus {
-    border-color: @color-main-text;
+    border-color: @color-invalid;
+    box-shadow: 0 0 0 1px @color-invalid;
   }
 
   &:active {
@@ -210,10 +208,6 @@
 
   &:disabled {
     opacity: 0.3;
-  }
-
-  &:invalid {
-    border-color: @color-invalid;
   }
 
   &--mail {
@@ -226,7 +220,7 @@
 
   &-mail-icon {
     position: absolute;
-    color: @color-button;
+    color: @color-card-title;
     right: 15px;
     top: 0;
     bottom: 0;
@@ -254,11 +248,6 @@
 /* stylelint-disable */
 // противоречие между stylelint и editorconfig документа в части пробелов до и после знака "+"
 
-.form__control:invalid:hover+.form__control-tel-icon,
-.form__control:invalid:hover+.form__control-mail-icon {
-  color: @color-card-title;
-}
-
 .form__control:hover+.form__control-tel-icon,
 .form__control:hover+.form__control-mail-icon {
   color: @color-card-title;
@@ -266,7 +255,7 @@
 
 .form__control:invalid:focus+.form__control-tel-icon,
 .form__control:invalid:focus+.form__control-mail-icon {
-  color: @color-button;
+  color: @color-invalid;
 }
 
 .form__control:focus+.form__control-tel-icon,
@@ -279,19 +268,9 @@
   color: @color-button;
 }
 
-.form__control:invalid:active+.form__control-tel-icon,
-.form__control:invalid:active+.form__control-mail-icon {
-  color: @color-button;
-}
-
 .form__control:disabled+.form__control-tel-icon,
 .form__control:disabled+.form__control-mail-icon {
   opacity: 0.3;
-}
-
-.form__control:invalid+.form__control-tel-icon,
-.form__control:invalid+.form__control-mail-icon {
-  color: @color-invalid;
 }
 
 /* stylelint-enable */
@@ -371,6 +350,10 @@
   position: relative;
   display: block;
   padding-left: 45px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
 }
 
 .form__control-mark {
@@ -384,6 +367,11 @@
   background-color: @color-main-background;
   border: 1px solid @color-border;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 /* stylelint-disable */
@@ -400,12 +388,21 @@
   height: 13.5px;
   background-color: @color-button;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .form__label-checkbox {
   position: relative;
   display: block;
   padding-left: 46px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 59px;
+  }
 }
 
 .form__control-mark-checkbox {
@@ -418,6 +415,11 @@
   height: 30px;
   background-color: @color-main-background;
   border: 1px solid @color-border;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .form__checkbox:checked+.form__control-mark-checkbox::before {
@@ -432,6 +434,11 @@
   background-image: url("../img/form-img/tick.svg");
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 19px;
+  }
 }
 
 .form__radio:hover+.form__control-mark,
