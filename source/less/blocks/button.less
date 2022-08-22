@@ -4,14 +4,43 @@
   vertical-align: middle;
   font-family: @upper-font;
   text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
 }
 
 .button--main-color {
   background-color: @color-button;
   color: @color-main-background;
+
+  &:hover {
+    background-color: @color-button-dark;
+  }
+
+  &:active {
+    background-color: @color-button-dark;
+    color: fade(@color-main-background, 30%);
+  }
+
+  &:focus {
+    background-color: @color-button-dark;
+  }
 }
 
 .button--second-color {
   background-color: @color-background;
   color: @color-main-text;
+
+  &:hover {
+    background-color: @color-border-4;
+  }
+
+  &:active {
+    background-color: @color-border-4;
+    opacity: 0.3;
+  }
+
+  &:focus {
+    background-color: @color-border-4;
+    opacity: 0.3;
+  }
 }

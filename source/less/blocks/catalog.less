@@ -1,5 +1,5 @@
 .catalog {
-  background-color: @color-main-background;
+  padding-top: 27px;
 }
 
 .catalog__title {
@@ -10,4 +10,33 @@
   font-size: 36px;
   line-height: 36px;
   color: @color-headind;
+
+  &::before {
+    .pseudo ();
+    height: 1px;
+    width: 100%;
+    bottom: -49px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: @color-line;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 163px;
+    font-size: 60px;
+    line-height: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 165px;
+  }
+}
+
+.catalog__title-wrapper {
+  position: relative;
 }

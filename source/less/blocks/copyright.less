@@ -1,8 +1,48 @@
 .copyright {
   padding: 15px 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    min-height: 147px;
+  }
 }
 
 .copyright__link {
+  position: relative;
+  display: block;
+  text-align: left;
+  padding: 22px 0;
+  padding-right: 30px;
   font-size: 16px;
   color: @color-main-text;
+
+  &:hover {
+    color: @color-main-text;
+  }
+
+  &:active {
+    color: fade(@color-main-text, 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 50px;
+  }
+}
+
+.copyright__link-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  color: @color-brown;
+
+  &:hover {
+    color: @color-button;
+  }
+
+  &:active {
+    color: fade(@color-button, 30%);
+  }
 }

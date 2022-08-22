@@ -1,6 +1,15 @@
 .main-header {
+  min-width: 320px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    padding: 0 110px;
+    max-width: @desktop-width;
   }
 }
