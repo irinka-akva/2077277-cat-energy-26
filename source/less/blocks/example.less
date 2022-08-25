@@ -306,6 +306,9 @@
   }
 }
 
+/* stylelint-disable */
+// противоречие между stylelint и editorconfig документа в части пробелов до и после знака "+"
+
 .example__range:hover .example__range-icon {
   color: @color-button;
 }
@@ -321,3 +324,5 @@
 .example__range:active+.example__range-line {
   background-color: @color-button-dark;
 }
+
+/* stylelint-enable */
