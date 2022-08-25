@@ -186,7 +186,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 99px;
+    margin-bottom: 75px;
   }
 
   @media (min-width: @desktop-width) {
@@ -204,14 +204,28 @@
 
 .example__image-wrapper-2 {
   display: flex;
+}
 
-  @media (min-width: @desktop-width) {
-    padding-top: 190px;
+.example__image--before {
+  width: 280px;
+  height: 256px;
+
+  @media (min-width: @tablet-width) {
+    width: 560px;
+    height: 512px;
   }
 }
 
 .example__image--after {
   margin-left: -140px;
+  width: 280px;
+  height: 256px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: -280px;
+    width: 560px;
+    height: 512px;
+  }
 }
 
 .example__image-wrapper-before {
@@ -227,6 +241,11 @@
   width: 140px;
   height: 256px;
   overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    width: 280px;
+    height: 512px;
+  }
 }
 
 .example__range-icon {
@@ -246,6 +265,15 @@
   margin: auto;
   background-color: @color-brown;
   border-radius: 2px;
+
+  @media (min-width: @tablet-width) {
+    height: 512px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 512px;
+    bottom: auto;
+  }
 }
 
 .example__range {
@@ -264,6 +292,11 @@
   border-radius: 20px;
   cursor: pointer;
 
+  @media (min-width: @desktop-width) {
+    top: 236px;
+    bottom: auto;
+  }
+
   &:hover {
     border-color: @color-button;
   }
@@ -281,10 +314,10 @@
   color: @color-button-dark;
 }
 
-.example__range:hover + .example__range-line {
+.example__range:hover+.example__range-line {
   background-color: @color-button;
 }
 
-.example__range:active + .example__range-line {
+.example__range:active+.example__range-line {
   background-color: @color-button-dark;
 }

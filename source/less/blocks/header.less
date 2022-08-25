@@ -14,7 +14,7 @@
   }
 }
 
-.header__wrapper-logo {
+.header__logo {
   display: flex;
   align-items: center;
   min-height: 65px;
@@ -25,6 +25,7 @@
   @media (min-width: @tablet-width) {
     padding-right: 0;
     min-width: 174px;
+    min-height: 52px;
     padding-left: 0;
   }
 
@@ -42,6 +43,19 @@
 
   @media (min-width: @tablet-width) {
     margin-right: 10px;
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 202px;
+    height: 59px;
+  }
+}
+
+.header__logo-text {
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
@@ -53,11 +67,4 @@
 .header__logo-icon:active,
 .header__logo-text:active {
   opacity: 0.6;
-}
-
-.header__logo-text {
-  display: block;
-  width: 101px;
-  height: 18px;
-  cursor: pointer;
 }
