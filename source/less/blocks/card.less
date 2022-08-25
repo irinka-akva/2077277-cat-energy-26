@@ -34,8 +34,14 @@
   align-self: flex-end;
   justify-self: center;
 
-  @media (min-width: @tablet-width) {
-    min-height: 156px;
+  &--small {
+    width: 68px;
+    height: 86px;
+  }
+
+  &--big {
+    width: 84px;
+    height: 101px;
   }
 
   &:hover {
@@ -50,6 +56,39 @@
     outline: none;
     opacity: 0.3;
   }
+
+  @media (min-width: @tablet-width) {
+    min-height: 156px;
+
+    &--small {
+      width: 163px;
+      height: 174px;
+      margin-top: -43px;
+    }
+
+    &--big {
+      width: 168px;
+      height: 200px;
+      margin-top: -73px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--small {
+      margin-top: -52px;
+    }
+
+    &--big {
+      width: 172px;
+      height: 196px;
+      margin-top: -80px;
+    }
+  }
+}
+
+.card__link-picture-icon {
+  width: 100%;
+  height: auto;
 }
 
 
@@ -205,17 +244,20 @@
   }
 }
 
-.card__button {
+
+.card__button-wrapper {
   grid-column: 1/3;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1/2;
+  }
+}
+
+.card__button {
   padding: 10px 10px;
   font-size: 16px;
   line-height: 20px;
   width: 100%;
-
-  @media (min-width: @tablet-width) {
-    grid-column: 1/2;
-    min-height: 0;
-  }
 }
 
 .card__text {
