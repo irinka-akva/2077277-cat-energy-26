@@ -21,15 +21,15 @@
 }
 
 .programs__item {
-  padding: 30px 20px 18px 20px;
+  padding: 30px 20px 22px 20px;
   background-color: @color-background;
 
   @media (min-width: @tablet-width) {
-    padding: 77px 51px 55px 52px;
+    padding: 77px 51px 57px 52px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 77px 28px 53px 52px;
+    padding: 77px 28px 59px 52px;
   }
 }
 
@@ -37,7 +37,7 @@
   position: relative;
   margin: 0;
   margin-left: 71px;
-  margin-bottom: 29px;
+  margin-bottom: 28px;
   font-family: @upper-font;
   font-weight: 400;
   font-size: 24px;
@@ -65,14 +65,14 @@
       width: 100px;
       height: 106px;
       left: -162px;
-      top: -41px;
+      top: -37px;
     }
   }
 
   &--active::before {
     .pseudo ();
     width: 67px;
-    height: 50px;
+    height: 55px;
     left: -79px;
     top: -10px;
     background-image: url("../img/index-img/programm-2-icon.svg");
@@ -89,7 +89,7 @@
       width: 134px;
       height: 100px;
       left: -181px;
-      top: -47px;
+      top: -30px;
     }
   }
 
@@ -127,8 +127,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-right: 268px;
-    margin-bottom: 48px;
+    padding-right: 262px;
+    margin-bottom: 52px;
     font-size: 16px;
     line-height: 1.5;
     color: @color-headind;
@@ -138,7 +138,7 @@
       .pseudo ();
       width: 200px;
       height: 211px;
-      right: 0;
+      right: 10px;
       top: 0;
       bottom: 0;
       margin: auto;
@@ -156,10 +156,8 @@
       .pseudo ();
       width: 268px;
       height: 200px;
-      right: -34px;
-      top: 0;
-      bottom: 0;
-      margin: auto;
+      right: -25px;
+      bottom: -60px;
       background-image: url("../img/index-img/programm-2-icon.svg");
       background-position: center;
       background-repeat: no-repeat;
@@ -172,7 +170,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 23px;
+    margin-bottom: 27px;
     padding-right: 0;
     min-height: 72px;
   }
@@ -180,21 +178,32 @@
 
 .programs__link {
   position: relative;
+  display: block;
   font-family: @upper-font;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: @color-headind;
-  padding-right: 47px;
+  padding-right: 139px;
   max-width: 238px;
 
   &::after {
     .pseudo ();
     width: 32px;
     height: 11px;
-    right: 0;
-    top: 7px;
+    right: 105px;
+    top: 4px;
     background-image: url("../img/index-img/one-arrow.svg");
+
+    @media (min-width: @tablet-width) {
+      right: 75px;
+      top: 9px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 73px;
+      top: 9px;
+    }
   }
 
   &:active {
@@ -202,6 +211,8 @@
   }
 
   @media (min-width: @tablet-width) {
+
+    padding-right: 115px;
     font-size: 20px;
     line-height: 1.5;
   }

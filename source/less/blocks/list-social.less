@@ -1,11 +1,15 @@
 .list-social {
   margin: 0;
-  padding: 20px 74px;
+  padding: 19px 74px;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 19px 65px 19px 83px;
+  }
 }
 
 .list-social__item:not(:last-child) {
-  margin-right: 27px;
+  margin-right: 25px;
 }
 
 .list-social__link {

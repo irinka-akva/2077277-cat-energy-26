@@ -53,6 +53,7 @@
 .description__item {
   position: relative;
   padding-left: 80px;
+  padding-top: 3px;
   min-height: 60px;
 
   &--benefit::before {
@@ -137,7 +138,19 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 230px;
+    max-width: 245px;
+
+    &--type {
+      margin-left: 10px;
+    }
+
+    &--frequency {
+      margin-left: 20px;
+    }
+
+    &--time {
+      margin-left: 30px;
+    }
   }
 }
 
