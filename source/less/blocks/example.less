@@ -1,5 +1,6 @@
 .example {
   background-color: @color-grey;
+  padding-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 101px;
@@ -65,10 +66,12 @@
     line-height: 1.5;
     min-height: 72px;
     margin-bottom: 54px;
+    padding-right: 10px;
 
     @media (min-width: @desktop-width) {
       max-width: 436px;
       margin-bottom: 69px;
+      padding-right: 0;
     }
   }
 }
@@ -82,8 +85,12 @@
   padding: 0;
   list-style-type: none;
 
+  @media (min-width: @tablet-width) {
+    gap: 42px;
+  }
+
   @media (min-width: @desktop-width) {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
 }
 
@@ -160,20 +167,27 @@
     line-height: 1.5;
     text-align: right;
     margin-bottom: 0;
+    padding-top: 6px;
   }
 
   @media (min-width: @desktop-width) {
+    display: flex;
+    // flex-wrap: wrap;
     width: 326px;
   }
 }
 
 .example__cost-text {
+  padding-left: 3px;
+
   @media (min-width: @tablet-width) {
     display: block;
   }
 
   @media (min-width: @desktop-width) {
     display: inline-block;
+    text-align: left;
+    padding-left: 0;
 
     &--margin {
       margin-right: 63px;
@@ -186,7 +200,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 75px;
+    margin-bottom: 70px;
   }
 
   @media (min-width: @desktop-width) {
@@ -199,6 +213,10 @@
 
   @media (min-width: @desktop-width) {
     width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 90px;
   }
 }
 
@@ -306,6 +324,9 @@
   }
 }
 
+/* stylelint-disable */
+// противоречие между stylelint и editorconfig документа в части пробелов до и после знака "+"
+
 .example__range:hover .example__range-icon {
   color: @color-button;
 }
@@ -321,3 +342,5 @@
 .example__range:active+.example__range-line {
   background-color: @color-button-dark;
 }
+
+/* stylelint-enable */

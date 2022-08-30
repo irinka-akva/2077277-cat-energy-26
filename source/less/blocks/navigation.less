@@ -12,7 +12,6 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 1.3;
-    padding-top: 30px;
     width: 62%;
     max-width: 478px;
   }
@@ -20,7 +19,7 @@
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
-    padding-top: 57px;
+    padding-top: 30px;
   }
 }
 
@@ -92,7 +91,7 @@
 .navigation__link {
   display: block;
   min-height: 65px;
-  padding: 22px 20px 24px 20px;
+  padding: 21px 20px 24px 20px;
   color: @color-headind;
 
   &:hover {
@@ -104,11 +103,13 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 12px 0 0 0;
+    padding: 42px 0 10px 0;
     min-height: 50px;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 40px 0 10px 0;
+
     &--white {
       color: @color-main-background;
     }
@@ -131,75 +132,75 @@
   border: none;
 }
 
-.navigation--close .navigation__toggle::before {
-  .pseudo ();
-  top: 2px;
-  right: 0;
-  width: 24px;
-  height: 1.5px;
-  background-color: @color-headind;
-  box-shadow: 0 9px 0 0 @color-headind, 0 18px 0 0 @color-headind;
-}
-
-.navigation--close .navigation__toggle:hover::before {
-  background-color: fade(@color-headind, 60%);
-  box-shadow:
-    0 9px 0 0 fade(@color-headind, 60%),
-    0 18px 0 0 fade(@color-headind, 60%);
-}
-
-.navigation--close .navigation__toggle:active::before {
-  background-color: fade(@color-headind, 60%);
-  box-shadow:
-    0 9px 0 0 fade(@color-headind, 60%),
-    0 18px 0 0 fade(@color-headind, 60%);
-}
-
-.navigation--open .navigation__toggle::before,
-.navigation--open .navigation__toggle::after {
-  .pseudo ();
-  top: 10px;
-  right: -3px;
-  width: 25px;
-  height: 1.5px;
-  background-color: @color-headind;
-}
-
-.navigation--open .navigation__toggle::before {
-  transform: rotate(45deg);
-  box-shadow: none;
-}
-
-.navigation--open .navigation__toggle::after {
-  transform: rotate(-45deg);
-}
-
-.navigation--open .navigation__toggle:hover::before,
-.navigation--open .navigation__toggle:hover::after {
-  background-color: fade(@color-headind, 60%);
-}
-
-.navigation--open .navigation__toggle:active::before,
-.navigation--open .navigation__toggle:active::after {
-  background-color: fade(@color-headind, 60%);
-}
-
-.navigation--no-js .navigation__toggle {
-  display: none;
-}
-
 @media (max-width: @mobile-width-only) {
+  .navigation--close .navigation__toggle::before {
+    .pseudo ();
+    top: 2px;
+    right: 0;
+    width: 24px;
+    height: 1.5px;
+    background-color: @color-headind;
+    box-shadow: 0 8px 0 0 @color-headind, 0 16px 0 0 @color-headind;
+  }
+
+  .navigation--close .navigation__toggle:hover::before {
+    background-color: fade(@color-headind, 60%);
+    box-shadow:
+      0 9px 0 0 fade(@color-headind, 60%),
+      0 18px 0 0 fade(@color-headind, 60%);
+  }
+
+  .navigation--close .navigation__toggle:active::before {
+    background-color: fade(@color-headind, 60%);
+    box-shadow:
+      0 9px 0 0 fade(@color-headind, 60%),
+      0 18px 0 0 fade(@color-headind, 60%);
+  }
+
+  .navigation--open .navigation__toggle::before,
+  .navigation--open .navigation__toggle::after {
+    .pseudo ();
+    top: 10px;
+    right: 0;
+    width: 25px;
+    height: 1.5px;
+    background-color: @color-headind;
+  }
+
+  .navigation--open .navigation__toggle::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  .navigation--open .navigation__toggle::after {
+    transform: rotate(-45deg);
+  }
+
+  .navigation--open .navigation__toggle:hover::before,
+  .navigation--open .navigation__toggle:hover::after {
+    background-color: fade(@color-headind, 60%);
+  }
+
+  .navigation--open .navigation__toggle:active::before,
+  .navigation--open .navigation__toggle:active::after {
+    background-color: fade(@color-headind, 60%);
+  }
+
+  .navigation--no-js .navigation__toggle {
+    display: none;
+  }
+
   .navigation--close .navigation__item {
     display: none;
   }
-}
 
-.navigation--open .navigation__wrapper {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  z-index: 10;
-  background-color: @color-main-background;
+  .navigation--open .navigation__wrapper {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    background-color: @color-main-background;
+  }
 }
 
 .navigation__wrapper {
