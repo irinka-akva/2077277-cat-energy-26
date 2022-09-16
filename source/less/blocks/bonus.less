@@ -32,10 +32,11 @@
   position: relative;
   margin: auto;
   width: 279px;
-  height: 289px;
+  min-height: 289px;
   background: url("../img/catalog-img/green-2-background.png") no-repeat center,
     url("../img/catalog-img/cat-2-background.png") no-repeat center;
   padding-top: 187px;
+  padding-bottom: 15px;
   background-color: @color-button;
 
   @media (min-resolution: 2dppx) {
@@ -46,10 +47,11 @@
 
   @media (min-width: @tablet-width) {
     width: 707px;
-    height: 200px;
+    min-height: 200px;
     background: url("../img/catalog-img/green-2-background-tablet.png") no-repeat center,
       url("../img/catalog-img/cat-2-background-tablet.png") no-repeat center;
     padding-top: 71px;
+    padding-bottom: 0;
 
     @media (min-resolution: 2dppx) {
       background: url("../img/catalog-img/green-2-background-tablet-2x.png") no-repeat center,
@@ -59,8 +61,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 245px;
-    height: 289px;
+    width: 246px;
+    min-height: 289px;
     background: url("../img/catalog-img/green-2-background-desktop.png") no-repeat center,
       url("../img/catalog-img/cat-2-background-desktop.png") no-repeat center;
     padding-top: 188px;
@@ -70,7 +72,7 @@
     @media (min-resolution: 2dppx) {
       background: url("../img/catalog-img/green-2-background-desktop-2x.png") no-repeat center,
         url("../img/catalog-img/cat-2-background-desktop-2x.png") no-repeat center;
-      background-size: 245px auto;
+      background-size: 246px auto;
     }
   }
 }
@@ -79,20 +81,22 @@
   margin: 0 auto;
   max-width: 230px;
   max-height: 90px;
-  overflow: auto;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+  overflow: hidden;
   color: @color-main-background;
 
   @media (min-width: @tablet-width) {
     margin-left: 422px;
     text-align: left;
+    max-height: 110px;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0 auto;
     text-align: center;
+    max-height: 80px;
   }
 }
 

@@ -20,6 +20,7 @@
     font-size: 20px;
     line-height: 30px;
     padding-top: 30px;
+    max-width: 478px;
   }
 }
 
@@ -62,6 +63,8 @@
   }
 
   @media (min-width: @desktop-width) {
+    max-width: 170px;
+
     &--current-white::after {
       .pseudo ();
       right: 0;
@@ -98,6 +101,11 @@
     opacity: 0.6;
   }
 
+  &:focus {
+    opacity: 0.3;
+    outline: none;
+  }
+
   &:active {
     opacity: 0.3;
   }
@@ -130,6 +138,10 @@
   background-color: transparent;
   cursor: pointer;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 @media (max-width: @mobile-width-only) {
@@ -138,7 +150,7 @@
     top: 2px;
     right: 0;
     width: 24px;
-    height: 1.5px;
+    height: 2px;
     background-color: @color-headind;
     box-shadow: 0 8px 0 0 @color-headind, 0 16px 0 0 @color-headind;
   }
@@ -146,15 +158,26 @@
   .navigation--close .navigation__toggle:hover::before {
     background-color: fade(@color-headind, 60%);
     box-shadow:
-      0 9px 0 0 fade(@color-headind, 60%),
-      0 18px 0 0 fade(@color-headind, 60%);
+      0 8px 0 0 fade(@color-headind, 60%),
+      0 16px 0 0 fade(@color-headind, 60%);
+  }
+
+  .navigation--close .navigation__toggle:focus::before {
+    background-color: fade(@color-headind, 50%);
+    box-shadow:
+      0 8px 0 0 fade(@color-headind, 50%),
+      0 16px 0 0 fade(@color-headind, 50%);
+  }
+
+  .navigation--close .navigation__toggle:focus {
+    outline: none;
   }
 
   .navigation--close .navigation__toggle:active::before {
     background-color: fade(@color-headind, 60%);
     box-shadow:
-      0 9px 0 0 fade(@color-headind, 60%),
-      0 18px 0 0 fade(@color-headind, 60%);
+      0 8px 0 0 fade(@color-headind, 60%),
+      0 16px 0 0 fade(@color-headind, 60%);
   }
 
   .navigation--open .navigation__toggle::before,
@@ -179,6 +202,15 @@
   .navigation--open .navigation__toggle:hover::before,
   .navigation--open .navigation__toggle:hover::after {
     background-color: fade(@color-headind, 60%);
+  }
+
+  .navigation--open .navigation__toggle:focus::before,
+  .navigation--open .navigation__toggle:focus::after {
+    background-color: fade(@color-headind, 50%);
+  }
+
+  .navigation--open .navigation__toggle:focus {
+    outline: none;
   }
 
   .navigation--open .navigation__toggle:active::before,

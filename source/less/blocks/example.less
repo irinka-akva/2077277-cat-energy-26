@@ -96,6 +96,11 @@
 
 .example__item {
   margin-bottom: 20px;
+  min-width: 124px;
+
+  @media (min-width: @desktop-width) {
+    min-width: auto;
+  }
 }
 
 .example__number {

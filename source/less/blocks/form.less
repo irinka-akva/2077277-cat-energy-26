@@ -53,7 +53,7 @@
   }
 
   &--contacts {
-    margin-bottom: 41px;
+    margin-bottom: 38px;
 
     @media (min-width: @tablet-width) {
       margin-bottom: 87px;
@@ -84,12 +84,12 @@
 
 .form__container {
   display: grid;
-  height: 45px;
+  min-height: 45px;
 
   @media (min-width: @tablet-width) {
     margin-left: 41px;
     margin-right: 36px;
-    height: 52px;
+    min-height: 52px;
   }
 
   @media (min-width: @desktop-width) {
@@ -131,7 +131,7 @@
 
     @media (min-width: @desktop-width) {
       margin-right: 39px;
-      height: 50px;
+      min-height: 50px;
     }
   }
 
@@ -144,7 +144,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      height: 50px;
+      min-height: 50px;
       margin-left: 39px;
     }
   }
@@ -163,13 +163,13 @@
 }
 
 .form__label {
-  display: flex;
-  align-items: center;
-  padding: 8px 10px 8px 0;
-  height: 45px;
+  padding: 12px 8px 8px 0;
+  min-height: 45px;
+  word-wrap: break-word;
 
   @media (min-width: @tablet-width) {
-    height: 52px;
+    min-height: 52px;
+    padding: 10px 8px 8px 0;
   }
 }
 
@@ -178,10 +178,43 @@
   padding: 13px 15px 14px 17px;
   min-width: 0;
   outline: none;
-  height: 45px;
+  min-height: 45px;
+  appearance: textfield;
+
+  &--text {
+    padding: 11px 15px 12px 14px;
+
+    @media (min-width: @tablet-width) {
+      padding: 11px 15px 11px 16px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 10px 15px 10px 18px;
+    }
+  }
+
+  &--number {
+    padding: 13px 15px 13px 17px;
+
+    @media (min-width: @tablet-width) {
+      padding: 11px 15px 9px 17px;
+    }
+  }
+
+  &--tel {
+    padding: 12px 51px 13px 17px;
+
+    @media (min-width: @tablet-width) {
+      padding: 8px 50px 11px 17px;
+    }
+
+    @media (min-width: @desktop-width) {
+      min-height: 50px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
-    height: 52px;
+    min-height: 52px;
   }
 
   &:hover {
@@ -207,10 +240,15 @@
   }
 
   &--mail {
-    padding-right: 51px;
+    padding-right: 50px;
+    padding-left: 14px;
+
+    @media (min-width: @tablet-width) {
+      padding: 8px 50px 11px 19px;
+    }
 
     @media (min-width: @desktop-width) {
-      max-height: 50px;
+      min-height: 50px;
     }
   }
 
@@ -221,14 +259,6 @@
     top: 0;
     bottom: 0;
     margin: auto;
-  }
-
-  &--tel {
-    padding-right: 51px;
-
-    @media (min-width: @desktop-width) {
-      max-height: 50px;
-    }
   }
 
   &-tel-icon {
@@ -308,7 +338,7 @@
 }
 
 .form__list {
-  padding: 28px 0 25px 0;
+  padding: 28px 0 23px 0;
   margin: 0;
   list-style-type: none;
 
@@ -531,6 +561,7 @@
     padding: 0 20px;
     margin-top: -18px;
     margin-left: -20px;
+    margin-bottom: 38px;
     background-color: @color-main-background;
 
     @media (min-width: @tablet-width) {
@@ -538,6 +569,7 @@
       padding: 0 38px;
       margin-top: -25px;
       margin-left: 0;
+      margin-bottom: 75px;
     }
 
     @media (min-width: @desktop-width) {
@@ -550,6 +582,7 @@
     padding: 0 20px;
     margin-top: -18px;
     margin-left: -20px;
+    margin-bottom: 33px;
     background-color: @color-main-background;
 
     @media (min-width: @tablet-width) {
@@ -557,6 +590,7 @@
       padding: 0 41px;
       margin-top: -25px;
       margin-left: 0;
+      margin-bottom: 75px;
     }
 
     @media (min-width: @desktop-width) {
@@ -640,6 +674,7 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @color-main-text;
+  opacity: 1;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -668,6 +703,8 @@
     padding: 16px 16px;
     margin-bottom: 0;
     margin-left: 41px;
+    font-size: 20px;
+    line-height: 1;
   }
 
   @media (min-width: @desktop-width) {

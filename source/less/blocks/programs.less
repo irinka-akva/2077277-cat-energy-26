@@ -99,12 +99,14 @@
     line-height: 1;
     margin-bottom: 24px;
     margin-left: 0;
+    margin-right: 150px;
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
     margin-bottom: 73px;
     margin-left: 162px;
+    margin-right: 0;
   }
 }
 
@@ -210,6 +212,11 @@
     opacity: 0.3;
   }
 
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+  }
+
   @media (min-width: @tablet-width) {
 
     padding-right: 115px;
@@ -219,5 +226,9 @@
 }
 
 .programs__link:hover::after {
+  background-image: url("../img/index-img/one-arrow-long.svg");
+}
+
+.programs__link:focus::after {
   background-image: url("../img/index-img/one-arrow-long.svg");
 }

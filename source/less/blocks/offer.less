@@ -33,18 +33,32 @@
   }
 }
 
-.offer__wrapper {
+.offer__wrapper-background {
   position: relative;
+  min-height: 302px;
+  padding-bottom: 164px;
   padding-top: 27px;
-  background-image: linear-gradient(@color-button 303px, transparent 303px);
-  z-index: 0;
+  margin-bottom: 138px;
+  background-color: @color-button;
+  z-index: -2;
 
   @media (min-width: @tablet-width) {
-    background-image: none;
+    background-color: transparent;
+    padding-bottom: 0;
+    min-height: 210px;
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: static;
+    margin: 0 auto;
+    margin-bottom: 21px;
+    padding: 0 110px;
+    max-width: @desktop-width;
   }
 }
 
-.offer__wrapper::before {
+.offer__wrapper-background::before {
   .pseudo ();
   background-image: url("../img/index-img/index-can-background.png");
   width: 280px;
@@ -52,7 +66,7 @@
   left: 0;
   right: 0;
   margin: 0 auto;
-  bottom: 63px;
+  bottom: -135px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/index-img/index-can-background-2x.png");
@@ -64,7 +78,10 @@
     width: 709px;
     height: 609px;
     z-index: -1;
-    bottom: 0;
+    bottom: -627px;
+    left: 30px;
+    right: auto;
+    margin: 0;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/index-img/index-can-tablet-2x.png");
@@ -76,8 +93,9 @@
     background-image: url("../img/index-img/index-can-desktop.png");
     width: 552px;
     height: 499px;
-    bottom: 136px;
-    right: 330px;
+    bottom: auto;
+    top: 141px;
+    right: 23%;
     left: auto;
     margin: 0;
 
@@ -89,7 +107,7 @@
 }
 
 @media (max-width: @mobile-width-only) {
-  .offer__wrapper::after {
+  .offer__wrapper-background::after {
     .pseudo ();
     width: 320px;
     height: 302px;
@@ -113,7 +131,6 @@
   margin: 0 auto;
   margin-bottom: 25px;
   max-width: 320px;
-  max-height: 120px;
   overflow: hidden;
   font-family: @upper-font;
   font-weight: 400;
@@ -126,21 +143,17 @@
     font-size: 60px;
     line-height: 1;
     max-width: 450px;
-    max-height: 200px;
-    margin: 30px 0 41px 87px;
+    margin: 30px 0 41px 117px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 77px 0 40px 80px;
-    max-height: 300px;
+    margin: 104px 0 40px 80px;
   }
 }
 
 .offer__text {
   margin: 0 auto;
-  margin-bottom: 302px;
   max-width: 198px;
-  max-height: 50px;
   overflow: hidden;
   text-transform: uppercase;
 
@@ -149,8 +162,7 @@
     line-height: 1;
     color: @color-headind;
     max-width: 530px;
-    max-height: 80px;
-    margin: 0 0 49px 87px;
+    margin: 0 0 49px 117px;
   }
 
   @media (min-width: @desktop-width) {

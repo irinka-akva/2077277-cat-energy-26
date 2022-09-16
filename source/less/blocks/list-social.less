@@ -20,19 +20,28 @@
   width: 24px;
 }
 
+.list-social__link:hover .list-social__link-icon {
+  color: @color-button;
+}
+
+.list-social__link:focus {
+  outline: none;
+}
+
+.list-social__link:focus .list-social__link-icon {
+  outline: none;
+  color: @color-button;
+}
+
+.list-social__link:active .list-social__link-icon {
+  color: fade(@color-button, 30%);
+}
+
 .list-social__link-icon {
   display: block;
   padding: 0;
   color: @color-brown;
   margin: auto;
-
-  &:hover {
-    color: @color-button;
-  }
-
-  &:active {
-    color: fade(@color-button, 30%);
-  }
 }
 
 .list-social__link-icon-you,

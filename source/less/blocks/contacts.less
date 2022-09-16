@@ -28,6 +28,11 @@
     opacity: 0.8;
   }
 
+  &:focus {
+    opacity: 0.5;
+    outline: none;
+  }
+
   &:active {
     opacity: 0.6;
   }
@@ -37,6 +42,7 @@
     align-items: center;
     padding: 39px 10px 32px 0;
     min-height: 147px;
+    border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -53,9 +59,16 @@
 
   @media (min-width: @tablet-width) {
     min-height: 147px;
+    border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {
     min-height: 149px;
+  }
+}
+
+.contacts__copyright {
+  @media (min-width: @tablet-width) {
+    max-width: 250px;
   }
 }

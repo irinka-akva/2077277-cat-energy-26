@@ -40,7 +40,6 @@
   margin-bottom: 8px;
   width: 34px;
   height: 38px;
-  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     margin-right: 10px;
@@ -54,18 +53,30 @@
   }
 }
 
+.header__logo__2,
 .header__logo-text {
   @media (min-width: @tablet-width) {
     display: none;
   }
 }
 
-.header__logo-icon:hover,
-.header__logo-text:hover {
+.header__logo__1:hover .header__logo-icon,
+.header__logo__2:hover .header__logo-text {
   opacity: 0.8;
 }
 
-.header__logo-icon:active,
-.header__logo-text:active {
+
+.header__logo__1:focus .header__logo-icon,
+.header__logo__2:focus .header__logo-text {
+  opacity: 0.5;
+}
+
+.header__logo__1:focus,
+.header__logo__2:focus {
+  outline: none;
+}
+
+.header__logo__1:active .header__logo-icon,
+.header__logo__2:active .header__logo-text {
   opacity: 0.6;
 }
