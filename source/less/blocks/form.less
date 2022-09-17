@@ -251,55 +251,51 @@
       min-height: 50px;
     }
   }
-
-  &-mail-icon {
-    position: absolute;
-    color: @color-card-title;
-    right: 15px;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-  }
-
-  &-tel-icon {
-    position: absolute;
-    color: @color-card-title;
-    right: 13px;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-  }
 }
 
-/* stylelint-disable */
-// противоречие между stylelint и editorconfig документа в части пробелов до и после знака "+"
+.form__control-mail-icon {
+  position: absolute;
+  color: @color-card-title;
+  right: 15px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
 
-.form__control:hover+.form__control-tel-icon,
-.form__control:hover+.form__control-mail-icon {
+.form__control-tel-icon {
+  position: absolute;
+  color: @color-card-title;
+  right: 13px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+
+.form__control:hover + .form__control-tel-icon,
+.form__control:hover + .form__control-mail-icon {
   color: @color-card-title;
 }
 
-.form__control:invalid:focus+.form__control-tel-icon,
-.form__control:invalid:focus+.form__control-mail-icon {
+.form__control:invalid:focus + .form__control-tel-icon,
+.form__control:invalid:focus + .form__control-mail-icon {
   color: @color-invalid;
 }
 
-.form__control:focus+.form__control-tel-icon,
-.form__control:focus+.form__control-mail-icon {
+.form__control:focus + .form__control-tel-icon,
+.form__control:focus + .form__control-mail-icon {
   color: @color-button;
 }
 
-.form__control:active+.form__control-tel-icon,
-.form__control:active+.form__control-mail-icon {
+.form__control:active + .form__control-tel-icon,
+.form__control:active + .form__control-mail-icon {
   color: @color-button;
 }
 
-.form__control:disabled+.form__control-tel-icon,
-.form__control:disabled+.form__control-mail-icon {
+.form__control:disabled + .form__control-tel-icon,
+.form__control:disabled + .form__control-mail-icon {
   opacity: 0.3;
 }
-
-/* stylelint-enable */
 
 .form__wrapper-1 {
   min-width: 320px;
@@ -433,10 +429,7 @@
   }
 }
 
-/* stylelint-disable */
-// противоречие между stylelint и editorconfig документа в части пробелов до и после знака "+"
-
-.form__radio:checked+.form__control-mark::before {
+.form__radio:checked + .form__control-mark::before {
   .pseudo ();
   top: 0;
   left: 0;
@@ -481,7 +474,7 @@
   }
 }
 
-.form__checkbox:checked+.form__control-mark-checkbox::before {
+.form__checkbox:checked + .form__control-mark-checkbox::before {
   .pseudo ();
   top: 0;
   left: 0;
@@ -500,22 +493,56 @@
   }
 }
 
-.form__radio:hover+.form__control-mark,
-.form__checkbox:hover+.form__control-mark-checkbox {
+.form__radio:hover + .form__control-mark,
+.form__checkbox:hover + .form__control-mark-checkbox {
   border-color: @color-border-3;
 }
 
-.form__radio:focus+.form__control-mark,
-.form__checkbox:focus+.form__control-mark-checkbox {
+.form__radio:focus + .form__control-mark,
+.form__checkbox:focus + .form__control-mark-checkbox {
   border-color: @color-border-3;
 }
 
-.form__radio:disabled+.form__control-mark,
-.form__checkbox:disabled+.form__control-mark-checkbox {
+.form__radio:disabled + .form__control-mark,
+.form__checkbox:disabled + .form__control-mark-checkbox {
   opacity: 0.3;
 }
 
-/* stylelint-enable */
+.form__textarea-wrapper {
+  margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 50px;
+  }
+}
+
+.form__label-heading {
+  position: relative;
+  top: -18px;
+  margin: -18px 0 28px -20px;
+  padding: 0 20px;
+  width: 161px;
+  font-family: @upper-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: @color-headind;
+  background-color: @color-main-background;
+
+  @media (min-width: @tablet-width) {
+    top: -27px;
+    font-size: 36px;
+    line-height: 1;
+    width: 258px;
+    padding: 0 38px;
+    margin: -25px 0 70px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -39px;
+  }
+}
 
 .form__legend {
   margin: 0;
@@ -549,27 +576,6 @@
       br {
         display: none;
       }
-    }
-
-    @media (min-width: @desktop-width) {
-      margin-left: -39px;
-    }
-  }
-
-  &--comments {
-    width: 161px;
-    padding: 0 20px;
-    margin-top: -18px;
-    margin-left: -20px;
-    margin-bottom: 38px;
-    background-color: @color-main-background;
-
-    @media (min-width: @tablet-width) {
-      width: 258px;
-      padding: 0 38px;
-      margin-top: -25px;
-      margin-left: 0;
-      margin-bottom: 75px;
     }
 
     @media (min-width: @desktop-width) {
@@ -615,7 +621,7 @@
   border-top: 2px solid @color-button;
 }
 
-.form__legend-comments-wrapper {
+.form__label-heading-wrapper {
   border-top: 2px solid @color-button;
 }
 
