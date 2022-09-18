@@ -173,14 +173,22 @@
   }
 }
 
+.form__control[type="number"] {
+  appearance: textfield;
+}
+
 .form__control {
   border: 1px solid @color-border-2;
   padding: 13px 15px 14px 17px;
   min-width: 0;
   outline: none;
   min-height: 45px;
-  appearance: textfield;
-
+/*stylelint-disable*/
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+/*stylelint-enable*/
   &--text {
     padding: 11px 15px 12px 14px;
 
